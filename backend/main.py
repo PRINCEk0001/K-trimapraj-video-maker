@@ -94,7 +94,7 @@ async def run_pipeline_endpoint(run_id: str):
     }
     
     return EventSourceResponse(
-        orchestrator.run_pipeline_iterative(
+        orchestrator.run_pipeline(
             topic_hint=config.topic_hint,
             target_scene_count=config.target_scene_count,
             target_duration_minutes=config.target_duration_minutes,
